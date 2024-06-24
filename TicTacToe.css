@@ -1,0 +1,101 @@
+body{
+    background-color: black;
+}
+#header{
+    text-align: center;
+}
+#header p{
+    margin-top: 0;
+    margin-bottom: 12px;
+    vertical-align: top;
+    color: white;
+    font-style: normal;
+    font-family: "Teko", sans-serif;
+    font-weight: 450;
+    font-size: 55px;
+}
+#container{
+    display: flex;
+    align-items: center; /* Vertically centers the child elements */
+    justify-content: center;
+}
+strong{
+    font-family: "Teko", sans-serif;
+    font-size: 50px;
+    text-align: center;
+    width: 30vh;
+}
+#p1{
+    color: white;
+    margin-left: 16vh;
+    margin-right: 12vh;
+}
+#p2{
+    color: black;
+    margin-left: 14vh;
+    margin-right: 18vh;
+}
+#tictactoe{
+    display: inline-grid;
+    grid-template-columns: 26vh 28vh 26vh;
+    grid-template-rows: 26vh 28vh 26vh;
+    width: 80vh;
+    height: 80vh;
+    margin: auto;
+}
+#tictactoe div{
+    position: relative;
+    z-index: 1;
+}
+#tictactoe div img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    display: none;
+}
+.box{
+    cursor: pointer;
+}
+#box1{
+    border-bottom: 2vh solid white;
+    border-right: 2vh solid white;
+}
+#box2{
+    border-bottom: 2vh solid white;
+    border-right: 2vh solid white;
+    border-left: 2vh solid white;
+}
+#box3{
+    border-bottom: 2vh solid white;
+    border-left: 2vh solid white;
+}
+#box4{
+    border-bottom: 2vh solid white;
+    border-right: 2vh solid white;
+    border-top: 2vh solid white;
+}
+#box5{
+    border-bottom: 2vh solid white;
+    border-right: 2vh solid white;
+    border-top: 2vh solid white;
+    border-left: 2vh solid white;
+}
+#box6{
+    border-bottom: 2vh solid white;
+    border-left: 2vh solid white;
+    border-top: 2vh solid white;
+}
+#box7{
+    border-right: 2vh solid white;
+    border-top: 2vh solid white;
+}
+#box8{
+    border-right: 2vh solid white;
+    border-top: 2vh solid white;
+    border-left: 2vh solid white;
+}
+#box9{
+    border-top: 2vh solid white;
+    border-left: 2vh solid white;
+}
