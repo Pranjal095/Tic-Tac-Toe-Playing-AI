@@ -5,6 +5,7 @@ const circle = 2;
 let message1 = document.getElementById("p1");
 let message2 = document.getElementById("p2");
 
+//function to handle player click
 let onClick = function(event){
     const box = event.target.closest('.box');
     const index = Array.from(box.parentNode.children).indexOf(box); 
@@ -36,6 +37,7 @@ let onClick = function(event){
     }
 }
 
+//function to determine the alert message on game end
 function endGame(winner){
     if(winner === cross){
         alertPlayer("Player wins! Do you wish to play another game? (Y/n)");
@@ -48,6 +50,7 @@ function endGame(winner){
     }
 }
 
+//function to alert the player and obtain rematch input
 function alertPlayer(message){
     setTimeout(()=>{
         const choice = prompt(message);
@@ -115,6 +118,7 @@ function computerMove(){
     moveNum++;
 }
 
+//minimax helper function
 function minValue(board){
     if(terminal(board)){
         return utility(board);
@@ -130,6 +134,7 @@ function minValue(board){
     return minVal;
 }
 
+//minimax helper function
 function maxValue(board){
     if(terminal(board)){
         return utility(board);
@@ -199,7 +204,7 @@ function utility(board){
 
 //function to determine the player depending on the board configuration
 function player(board){
-    numNonEmpty = 0
+    let numNonEmpty = 0
     for(let i=0;i<3;i++){
         for(let j=0;j<3;j++){
             if(board[i][j] !== 0){
@@ -227,7 +232,7 @@ function checkWin(board,value){
 
 //fucntion to return an array consisting of all possible moves
 function actions(board){
-    actionArray = [];
+    const actionArray = [];
     for(let i=0;i<3;i++){
         for(let j=0;j<3;j++){
             if(board[i][j] == 0){
